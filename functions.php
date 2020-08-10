@@ -121,7 +121,7 @@ Loads the custom styles from the Theme Customizer
 ==========================================================
 */
 function mayecreate_theme_customize_css(){
-	require_once( get_template_directory_uri() . '/includes/custom-style.php' );
+	require_once( get_template_directory() . '/includes/custom-style.php' );
 }
 add_action( 'wp_head', 'mayecreate_theme_customize_css');
 
