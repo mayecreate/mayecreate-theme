@@ -1,0 +1,230 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.slideout-menu {
+  position: fixed;
+  left: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 250px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
+
+.slideout-panel {
+position:relative;
+z-index: 1;
+/* will-change: transform;  don't unccoment this it breaks stuff. */
+background: #ffffff;
+}
+
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+  box-shadow: 2px 0px 5px rgba(0,0,0,.15);
+}
+
+
+
+
+
+ .slideout-panel .nav-button{
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.slideout-panel .nav-button:focus {
+  outline: none;
+}
+.slideout-panel .nav-button span {
+  display: block;
+  position: absolute;
+  top: 22px;
+  left: 11px;
+  right: 11px;
+  height: 2px;
+  background: #6c9d30;;
+}
+.slideout-panel .nav-button span::before,
+.slideout-panel .nav-button span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6c9d30;;
+  content: "";
+}
+.slideout-panel .nav-button span::before {
+  top: -8px;
+}
+.slideout-panel .nav-button span::after {
+  bottom: -8px;
+}
+.slideout-panel .nav-button-x{
+  background-color: transparent;
+}
+
+.slideout-panel .nav-button-x span {
+  -webkit-transition: background 0s 0.3s;
+  -moz-transition: background 0s 0.3s;
+  -o-transition: background 0s 0.3s;
+  transition: background 0s 0.3s;
+}
+.slideout-panel .nav-button-x span::before,
+.slideout-panel .nav-button-x span::after {
+  -webkit-transition-duration: 0.3s, 0.3s;
+  -moz-transition-duration: 0.3s, 0.3s;
+  -o-transition-duration: 0.3s, 0.3s;
+  transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s;
+  -moz-transition-delay: 0.3s, 0s;
+  -o-transition-delay: 0.3s, 0s;
+  transition-delay: 0.3s, 0s;
+}
+.slideout-panel .nav-button-x span::before {
+  -webkit-transition-property: top, -webkit-transform;
+  -moz-transition-property: top, -moz-transform;
+  -o-transition-property: top, -o-transform;
+  transition-property: top, transform;
+}
+.slideout-panel .nav-button-x span::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+  -moz-transition-property: bottom, -moz-transform;
+  -o-transition-property: bottom, -o-transform;
+  transition-property: bottom, transform;
+}
+
+
+/* NAVIGATION:: Slide Out Drawer (Open)
+==========================================*/
+.slideout-open .slideout-panel .nav-button-x {
+  background-color: transparent;
+}
+.slideout-open .slideout-panel .nav-button-x span {
+  background: none;
+}
+.slideout-open .slideout-panel .nav-button-x span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.slideout-open .slideout-panel .nav-button-x span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.slideout-open .slideout-panel .nav-button-x span::before,
+.slideout-open .slideout-panel .nav-button-x span::after {
+  -webkit-transition-delay: 0s, 0.3s;
+  -moz-transition-delay: 0s, 0.3s;
+  -o-transition-delay: 0s, 0.3s;
+  transition-delay: 0s, 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slideout-open .slideout-panel .nav-button span {
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 11px;
+    right: 11px;
+    height: 2px;
+    background: transparent;
+}
+.slideout-open .slideout-panel .nav-button span::before,
+.slideout-open .slideout-panel .nav-button span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6c9d30;
+  content: "";
+}
+
+
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+.slideout-open .slideout-menu ul{
+  margin: 1em 0 1em 1em;
+}
+.slideout-open .slideout-menu ul ul{
+  margin: 0 0 0 1em;
+}
+.slideout-open .slideout-menu ul li{
+    
+}
+.slideout-open .slideout-menu ul li a{
+  position: relative;
+  width: 100%;
+  display: block;
+  padding: 8px 8px;
+}
+.slideout-open .slideout-menu ul li a::after {
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #f6f6f6;
+    position: absolute;
+}
+
+
+
+
+
+.slideout-menu .navbar-form {
+}
+.slideout-menu .navbar-form .form-group {
+    width: 90%;
+    padding: 0;
+    margin: 5% 5%;
+}
+.slideout-menu .navbar-form .form-group .form-control {
+  padding: 6px 6%;
+    width: 78%;
+    float: left;
+    margin-right: 2%;
+}
