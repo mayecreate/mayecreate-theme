@@ -121,7 +121,7 @@ Loads the custom styles from the Theme Customizer
 ==========================================================
 */
 function mayecreate_theme_customize_css(){
-	require_once( get_template_directory() . '/includes/custom-style.php' );
+	require_once( get_template_directory_uri() . '/includes/custom-style.php' );
 }
 add_action( 'wp_head', 'mayecreate_theme_customize_css');
 
@@ -245,10 +245,10 @@ function jsforwpblocks_editor_scripts() {
   $editorStylePath = '/style.css'; 
 	
   // Enqueue the bundled block JS file
-  wp_enqueue_script( 'mc-block-editor-script', get_theme_file_uri( '/js/mayecreate_scripts.js' ), false, '1.0', 'all' );
+  wp_enqueue_script( 'mc-block-editor-script', get_template_directory_uri() . '/js/mayecreate_scripts.js', false, '1.0', 'all' );
 	
   // Enqueue optional editor only styles
-  wp_enqueue_style( 'mc-block-editor-styles', get_theme_file_uri( '/style.css' ), false, '1.0', 'all' );
+  wp_enqueue_style( 'mc-block-editor-styles', get_template_directory_uri() . '/style.css', false, '1.0', 'all' );
 	
 }
 // Hook scripts function into block editor hook
