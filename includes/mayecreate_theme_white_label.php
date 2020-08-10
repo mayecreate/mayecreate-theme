@@ -74,7 +74,7 @@ function wpb_custom_logo() {
 echo '
 <style type="text/css">
 #wpwrap h1 {
-background-image: url(' . get_bloginfo('stylesheet_directory') . '/img/login-logo1.png) !important;
+background-image: url(' . get_template_directory_uri() . '/img/login-logo1.png) !important;
 background-position: left center !important;
 background-repeat: no-repeat !important;
 background-size: auto 100% !important;
