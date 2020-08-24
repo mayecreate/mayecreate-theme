@@ -19,10 +19,6 @@ function mayecreate_id_column_content( $column, $id ) {
 // WP Menu Categories
 add_action( 'init', 'build_taxonomies', 0 );
 
-function build_taxonomies() {
-   register_taxonomy( 'projectcategory', 'menu', array( 'hierarchical' => true, 'label' => 'Categories', 'query_var' => true, 'rewrite' => true, 'show_in_rest' => true ) );
-}
-
 function mayecreate_create_post_type() {
 
 	if(get_theme_mod('carousel_type', 'standard-posts') == 'custom-post-types') {
@@ -46,49 +42,6 @@ function mayecreate_create_post_type() {
 			)
 		);	
 	}
-	
-	// Register the "Project" custom post type if this is not needed, DELETE ME.
-		register_post_type( 'projects',
-			array(
-				'labels' => array(
-					'name'              => __( 'Projects'),
-					'singular_name'     => __( 'Project' ),
-					'add_new'           => __( 'Add Project' ),
-					'add_new_item'      => __( 'Add New Project' ),
-					'edit_item'         => __( 'Edit Project' ),  
-					
-				),
-			'public' => true,
-			'menu_position' => 10,
-			'rewrite' => array('slug' => 'project', 'with_front' => false),
-			'supports' => array('title','thumbnail','revisions','editor'),
-			'menu_icon'         => 'dashicons-art',
-			'taxonomies' => array('projectcategory'),
-			'show_in_rest' => true,
-			'has_archive' => true 
-			)
-		);
-	
-	// Register the "Team" custom post type if this is not needed, DELETE ME.
-		register_post_type( 'team',
-			array(
-				'labels' => array(
-					'name'              => __( 'Team'),
-					'singular_name'     => __( 'Team Member' ),
-					'add_new'           => __( 'Add Team Member' ),
-					'add_new_item'      => __( 'Add New Team Member' ),
-					'edit_item'         => __( 'Edit Team Member' ),  
-					
-				),
-			'public' => true,
-			'menu_position' => 10,
-			'rewrite' => array('slug' => 'team', 'with_front' => false),
-			'supports' => array('title','thumbnail','revisions','editor'),
-			'menu_icon'         => 'dashicons-groups',
-			'taxonomies' => array('teamcategory'),
-			'has_archive' => true 
-			)
-		);
 }
 add_action( 'init', 'mayecreate_create_post_type' );
 
