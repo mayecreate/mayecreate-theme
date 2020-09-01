@@ -146,7 +146,7 @@
 		 <?php $the_query = new WP_Query(array(
 				'post_type' => 'carousel_slides',
 				'posts_per_page' => 4,
-				'offset' => 1,
+				'offset' => 1, 
 				'orderby' => 'menu_order' 
 				));
 				while ($the_query->have_posts() ) : $the_query->the_post();
