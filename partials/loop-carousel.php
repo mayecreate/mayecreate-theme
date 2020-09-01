@@ -13,7 +13,7 @@
 	
 	/* Get The Image for the Slide
 	===========================================================*/
-	echo the_post_thumbnail('slider');
+	//echo the_post_thumbnail('slider');
 	
 	/* Start of the slide title and content
 	===========================================================*/
