@@ -285,9 +285,9 @@ add_theme_support( 'editor-color-palette', array(
 add_theme_support( 'disable-custom-colors' );
 
 
-function block_frames() {
+/*function block_frames() {
 header( 'X-FRAME-OPTIONS: SAMEORIGIN' );
 }
-add_action( 'send_headers', 'block_frames', 10 );
+add_action( 'send_headers', 'block_frames', 10 );*/
 
 
