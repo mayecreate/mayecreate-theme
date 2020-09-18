@@ -11,25 +11,25 @@ function mayecreate_wp_bootstrap_scripts_styles() {
     // Loads Bootstrap minified JavaScript file.
 	wp_enqueue_script('bootstrapjs', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', false ,'4.5.0', true );
 	// Loads the LightSlider javascript for the featured image slider
-	wp_enqueue_script('featuredSlider', get_template_directory_uri() . '/js/lightslider.js', array('jquery'),'1.0.0', true );
+	wp_enqueue_script('featuredSlider', get_theme_file_uri() . '/js/lightslider.js', array('jquery'),'1.0.0', true );
 	// Loads the MayeCreate custom scripts.
-	wp_register_script('mayecreatejs', get_template_directory_uri() . '/js/mayecreate_scripts.js', array('jquery'), '1.0.0', true );
+	wp_register_script('mayecreatejs', get_theme_file_uri() . '/js/mayecreate_scripts.js', array('jquery'), '1.0.0', true );
 	// Loads Javascript file for the  drawer menu
-	wp_enqueue_script('drawerMenu', get_template_directory_uri() . '/js/jquery.mmenu.all.min.js', array('jquery'),'1.0.0', true );
+	wp_enqueue_script('drawerMenu', get_theme_file_uri() . '/js/jquery.mmenu.all.min.js', array('jquery'),'1.0.0', true );
 	// Loads Bootstrap minified CSS file.
 	wp_enqueue_style('bootstrapwp', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', false ,'4.5.0');	
 	// Loads the main stylesheet for the featured image slider
-	wp_enqueue_style('featuredSliderStyle', get_template_directory_uri() . '/css/lightslider.min.css', array('bootstrapwp') ,'1.0');
+	wp_enqueue_style('featuredSliderStyle', get_theme_file_uri() . '/css/lightslider.min.css', array('bootstrapwp') ,'1.0');
 	// Loads the stylesheet for the slideout menu.
-	wp_enqueue_style('drawerMenuStyle', get_template_directory_uri() . '/css/jquery.mmenu.all.css', array('bootstrapwp') ,'1.0');
+	wp_enqueue_style('drawerMenuStyle', get_theme_file_uri() . '/css/jquery.mmenu.all.css', array('bootstrapwp') ,'1.0');
 	// Loads the additional stylesheet for the slideout menu for shadow
-	wp_enqueue_style('drawerMenuShadow', get_template_directory_uri() . '/css/jquery.mmenu.pageshadow.css', array('bootstrapwp') ,'1.0');
+	wp_enqueue_style('drawerMenuShadow', get_theme_file_uri() . '/css/jquery.mmenu.pageshadow.css', array('bootstrapwp') ,'1.0');
 	// Loads the additional stylesheet for the slideout menu left / right drawer positioning
-	wp_enqueue_style('drawerMenuPosition', get_template_directory_uri() . '/css/jquery.mmenu.positioning.css', array('bootstrapwp') ,'1.0');		
+	wp_enqueue_style('drawerMenuPosition', get_theme_file_uri() . '/css/jquery.mmenu.positioning.css', array('bootstrapwp') ,'1.0');		
 	// Loads our main stylesheet.
-	wp_register_style('style', get_template_directory_uri() . '/style.css', array('bootstrapwp') ,'1.0');
+	wp_register_style('style', get_theme_file_uri() . '/style.css', array('bootstrapwp') ,'1.0');
 	if (get_theme_mod('navbar_stick_on_scroll', 'navbar-static-scroll') == 'navbar-fix-scroll') {
-		wp_enqueue_script('drawerMenu', get_template_directory_uri() . '/js/menuScroll.js', array('jquery'),'4.5.0', true );
+		wp_enqueue_script('drawerMenu', get_theme_file_uri() . '/js/menuScroll.js', array('jquery'),'4.5.0', true );
 	}
     wp_enqueue_style('style');
     wp_enqueue_script('mayecreatejs');
@@ -47,69 +47,69 @@ add_action('wp_enqueue_scripts', 'mayecreate_wp_bootstrap_scripts_styles');
  */
 
 /* Remove from site or comment out when site goes live */
-//require_once 'includes/wordpress-theme-customizer-custom-controls-master/theme-customizer-demo.php';
+//get_template_part ('includes/wordpress-theme-customizer-custom-controls-master/theme-customizer-demo.php');
 
 
 
 /* Instantiates the blog title block */
-require_once 'includes/mayecreate_logo.php';
+get_template_part ('includes/mayecreate_logo.php');
 
 /* Instantiates the walker class for the bootstrap menus */
-require_once 'includes/mayecreate_nav.php';
+get_template_part ('includes/mayecreate_nav.php');
 
 /* Instantiates the menu areas in theme */
-require_once 'includes/mayecreate_menus.php';
+get_template_part ('includes/mayecreate_menus.php');
 
 /* Adds Breadcrub Navigation for sites */
-require_once 'includes/mayecreate_breadcrumb_nav.php';
+get_template_part ('includes/mayecreate_breadcrumb_nav.php');
 
 /* Instantiates the page title block */
-require_once 'includes/mayecreate_page_title.php';
+get_template_part ('includes/mayecreate_page_title.php');
 
 /* Instantiates the custom post types */
-require_once 'includes/mayecreate_post_types.php';
+get_template_part ('includes/mayecreate_post_types.php');
 
 /* Instantiates the widget areas of theme */
-require_once 'includes/mayecreate_widgets.php';
+get_template_part ('includes/mayecreate_widgets.php');
 
 /* Instantiates the facebook opengraph code to be used in the head of the theme if turned on*/
-require_once 'includes/mayecreate_facebook_opengraph.php';
+get_template_part ('includes/mayecreate_facebook_opengraph.php');
 
 /* Gets the slug of a post to be used in loops */
-require_once 'includes/mayecreate_slugs.php';
+get_template_part ('includes/mayecreate_slugs.php');
 
 /* Adjusts excerpt display properties */
-require_once 'includes/mayecreate_excerpts.php';
+get_template_part ('includes/mayecreate_excerpts.php');
 
 /* White labels the theme login */
-require_once 'includes/mayecreate_theme_white_label.php';
+get_template_part ('includes/mayecreate_theme_white_label.php');
 
 /* Instantiates the post thumbnails and custom post image sizes */
-require_once 'includes/mayecreate_custom_post_thumbnails.php';
+get_template_part ('includes/mayecreate_custom_post_thumbnails.php');
  
 /* Adds Theme Support for HTML5 Search Form */
 add_theme_support('html5', array('search-form'));
 
 /* Adds Responsive Wrapper Around oembed Media documents including You Tube and Vimeo */
-require_once 'includes/mayecreate_responsive_media.php';
+get_template_part ('includes/mayecreate_responsive_media.php');
 
 /* Adds Mayecreate Theme Customizer */
-require_once 'includes/mayecreate_theme_customizer.php';
+get_template_part ('includes/mayecreate_theme_customizer.php');
 
 /* Adds Mayecreate Shortcode to Theme */
-require_once 'includes/mayecreate_shortcodes.php';
+get_template_part ('includes/mayecreate_shortcodes.php');
 
 /* Adds Mayecreate Custom Blocks to Theme */
-require_once 'includes/mayecreate_blocks.php';
+get_template_part ('includes/mayecreate_blocks.php');
 
 /* Adds Mayecreate Columns to Theme */
-require_once 'includes/mayecreate_columns.php';
+get_template_part ('includes/mayecreate_columns.php');
 
 /* Removes responsive image functionality from site.  Will possibly remove after Wordpress 4.5 */
-require_once 'includes/mayecreate_responsive_images.php';
+get_template_part ('includes/mayecreate_responsive_images.php');
 
 /* Removes responsive image functionality from site.  Will possibly remove after Wordpress 4.5 */
-require_once 'includes/mayecreate_modify_capabilities.php';
+get_template_part ('includes/mayecreate_modify_capabilities.php');
 
 // Removes the ability to edit themes and plugins from the wordpress admin
 define( 'DISALLOW_FILE_EDIT', true );
@@ -245,10 +245,10 @@ function jsforwpblocks_editor_scripts() {
   $editorStylePath = '/style.css'; 
 	
   // Enqueue the bundled block JS file
-  wp_enqueue_script( 'mc-block-editor-script', get_template_directory_uri() . '/js/mayecreate_scripts.js', false, '1.0', 'all' );
+  wp_enqueue_script( 'mc-block-editor-script', get_theme_file_uri() . '/js/mayecreate_scripts.js', false, '1.0', 'all' );
 	
   // Enqueue optional editor only styles
-  wp_enqueue_style( 'mc-block-editor-styles', get_template_directory_uri() . '/style.css', false, '1.0', 'all' );
+  wp_enqueue_style( 'mc-block-editor-styles', get_theme_file_uri() . '/style.css', false, '1.0', 'all' );
 	
 }
 // Hook scripts function into block editor hook
