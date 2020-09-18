@@ -47,69 +47,69 @@ add_action('wp_enqueue_scripts', 'mayecreate_wp_bootstrap_scripts_styles');
  */
 
 /* Remove from site or comment out when site goes live */
-//get_template_part ('includes/wordpress-theme-customizer-custom-controls-master/theme-customizer-demo.php');
+//include get_template_part ('includes/wordpress-theme-customizer-custom-controls-master/theme-customizer-demo.php');
 
 
 
 /* Instantiates the blog title block */
-get_template_part ('includes/mayecreate_logo.php');
+include get_template_part ('includes/mayecreate_logo.php');
 
 /* Instantiates the walker class for the bootstrap menus */
-get_template_part ('includes/mayecreate_nav.php');
+include get_template_part ('includes/mayecreate_nav.php');
 
 /* Instantiates the menu areas in theme */
-get_template_part ('includes/mayecreate_menus.php');
+include get_template_part ('includes/mayecreate_menus.php');
 
 /* Adds Breadcrub Navigation for sites */
-get_template_part ('includes/mayecreate_breadcrumb_nav.php');
+include get_template_part ('includes/mayecreate_breadcrumb_nav.php');
 
 /* Instantiates the page title block */
-get_template_part ('includes/mayecreate_page_title.php');
+include get_template_part ('includes/mayecreate_page_title.php');
 
 /* Instantiates the custom post types */
-get_template_part ('includes/mayecreate_post_types.php');
+include get_template_part ('includes/mayecreate_post_types.php');
 
 /* Instantiates the widget areas of theme */
-get_template_part ('includes/mayecreate_widgets.php');
+include get_template_part ('includes/mayecreate_widgets.php');
 
 /* Instantiates the facebook opengraph code to be used in the head of the theme if turned on*/
-get_template_part ('includes/mayecreate_facebook_opengraph.php');
+include get_template_part ('includes/mayecreate_facebook_opengraph.php');
 
 /* Gets the slug of a post to be used in loops */
-get_template_part ('includes/mayecreate_slugs.php');
+include get_template_part ('includes/mayecreate_slugs.php');
 
 /* Adjusts excerpt display properties */
-get_template_part ('includes/mayecreate_excerpts.php');
+include get_template_part ('includes/mayecreate_excerpts.php');
 
 /* White labels the theme login */
-get_template_part ('includes/mayecreate_theme_white_label.php');
+include get_template_part ('includes/mayecreate_theme_white_label.php');
 
 /* Instantiates the post thumbnails and custom post image sizes */
-get_template_part ('includes/mayecreate_custom_post_thumbnails.php');
+include get_template_part ('includes/mayecreate_custom_post_thumbnails.php');
  
 /* Adds Theme Support for HTML5 Search Form */
 add_theme_support('html5', array('search-form'));
 
 /* Adds Responsive Wrapper Around oembed Media documents including You Tube and Vimeo */
-get_template_part ('includes/mayecreate_responsive_media.php');
+include get_template_part ('includes/mayecreate_responsive_media.php');
 
 /* Adds Mayecreate Theme Customizer */
-get_template_part ('includes/mayecreate_theme_customizer.php');
+include get_template_part ('includes/mayecreate_theme_customizer.php');
 
 /* Adds Mayecreate Shortcode to Theme */
-get_template_part ('includes/mayecreate_shortcodes.php');
+include get_template_part ('includes/mayecreate_shortcodes.php');
 
 /* Adds Mayecreate Custom Blocks to Theme */
-get_template_part ('includes/mayecreate_blocks.php');
+include get_template_part ('includes/mayecreate_blocks.php');
 
 /* Adds Mayecreate Columns to Theme */
-get_template_part ('includes/mayecreate_columns.php');
+include get_template_part ('includes/mayecreate_columns.php');
 
 /* Removes responsive image functionality from site.  Will possibly remove after Wordpress 4.5 */
-get_template_part ('includes/mayecreate_responsive_images.php');
+include get_template_part ('includes/mayecreate_responsive_images.php');
 
 /* Removes responsive image functionality from site.  Will possibly remove after Wordpress 4.5 */
-get_template_part ('includes/mayecreate_modify_capabilities.php');
+include get_template_part ('includes/mayecreate_modify_capabilities.php');
 
 // Removes the ability to edit themes and plugins from the wordpress admin
 define( 'DISALLOW_FILE_EDIT', true );
