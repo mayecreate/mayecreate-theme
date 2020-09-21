@@ -11,25 +11,25 @@ function mayecreate_wp_bootstrap_scripts_styles() {
     // Loads Bootstrap minified JavaScript file.
 	wp_enqueue_script('bootstrapjs', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', false ,'4.5.0', true );
 	// Loads the LightSlider javascript for the featured image slider
-	wp_enqueue_script('featuredSlider', get_theme_file_uri() . '/js/lightslider.js', array('jquery'),'1.0.0', true );
+	wp_enqueue_script('featuredSlider', get_template_directory_uri() . '/js/lightslider.js', array('jquery'),'1.0.0', true );
 	// Loads the MayeCreate custom scripts.
-	wp_register_script('mayecreatejs', get_theme_file_uri() . '/js/mayecreate_scripts.js', array('jquery'), '1.0.0', true );
+	wp_register_script('mayecreatejs', get_template_directory_uri() . '/js/mayecreate_scripts.js', array('jquery'), '1.0.0', true );
 	// Loads Javascript file for the  drawer menu
-	wp_enqueue_script('drawerMenu', get_theme_file_uri() . '/js/jquery.mmenu.all.min.js', array('jquery'),'1.0.0', true );
+	wp_enqueue_script('drawerMenu', get_template_directory_uri() . '/js/jquery.mmenu.all.min.js', array('jquery'),'1.0.0', true );
 	// Loads Bootstrap minified CSS file.
 	wp_enqueue_style('bootstrapwp', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', false ,'4.5.0');	
 	// Loads the main stylesheet for the featured image slider
-	wp_enqueue_style('featuredSliderStyle', get_theme_file_uri() . '/css/lightslider.min.css', array('bootstrapwp') ,'1.0');
+	wp_enqueue_style('featuredSliderStyle', get_template_directory_uri() . '/css/lightslider.min.css', array('bootstrapwp') ,'1.0');
 	// Loads the stylesheet for the slideout menu.
-	wp_enqueue_style('drawerMenuStyle', get_theme_file_uri() . '/css/jquery.mmenu.all.css', array('bootstrapwp') ,'1.0');
+	wp_enqueue_style('drawerMenuStyle', get_template_directory_uri() . '/css/jquery.mmenu.all.css', array('bootstrapwp') ,'1.0');
 	// Loads the additional stylesheet for the slideout menu for shadow
-	wp_enqueue_style('drawerMenuShadow', get_theme_file_uri() . '/css/jquery.mmenu.pageshadow.css', array('bootstrapwp') ,'1.0');
+	wp_enqueue_style('drawerMenuShadow', get_template_directory_uri() . '/css/jquery.mmenu.pageshadow.css', array('bootstrapwp') ,'1.0');
 	// Loads the additional stylesheet for the slideout menu left / right drawer positioning
-	wp_enqueue_style('drawerMenuPosition', get_theme_file_uri() . '/css/jquery.mmenu.positioning.css', array('bootstrapwp') ,'1.0');		
+	wp_enqueue_style('drawerMenuPosition', get_template_directory_uri() . '/css/jquery.mmenu.positioning.css', array('bootstrapwp') ,'1.0');		
 	// Loads our main stylesheet.
-	wp_register_style('style', get_theme_file_uri() . '/style.css', array('bootstrapwp') ,'1.0');
+	wp_register_style('style', get_template_directory_uri() . '/style.css', array('bootstrapwp') ,'1.0');
 	if (get_theme_mod('navbar_stick_on_scroll', 'navbar-static-scroll') == 'navbar-fix-scroll') {
-		wp_enqueue_script('drawerMenu', get_theme_file_uri() . '/js/menuScroll.js', array('jquery'),'4.5.0', true );
+		wp_enqueue_script('drawerMenu', get_template_directory_uri() . '/js/menuScroll.js', array('jquery'),'4.5.0', true );
 	}
     wp_enqueue_style('style');
     wp_enqueue_script('mayecreatejs');
@@ -245,11 +245,11 @@ function jsforwpblocks_editor_scripts() {
   $editorStylePath = '/style.css'; 
 	
   // Enqueue the bundled block JS file
-  wp_enqueue_script( 'mc-block-editor-script', get_theme_file_uri() . '/js/mayecreate_scripts.js', false, '1.0', 'all' );
+  wp_enqueue_script( 'mc-block-editor-script', get_template_directory_uri() . '/js/mayecreate_scripts.js', false, '1.0', 'all' );
 	
   // Enqueue optional editor only styles
-  wp_enqueue_style( 'mc-block-editor-styles', get_theme_file_uri() . '/style.css', false, '1.0', 'all' );
-	
+  wp_enqueue_style( 'mc-block-editor-styles', get_template_directory_uri() . '/style.css', false, '1.0', 'all' );
+
 }
 // Hook scripts function into block editor hook
 add_action( 'enqueue_block_editor_assets', 'jsforwpblocks_editor_scripts' );
