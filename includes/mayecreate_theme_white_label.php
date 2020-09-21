@@ -19,7 +19,7 @@ function mayecreate_custom_login_logo() {
 		max-width: 400px !important;
 		width:100% !important;
 		height: 300px !important;
-		background:url('.get_theme_file_uri().'/img/login-logo.png) !important;
+		background:url('.get_template_directory_uri().'/img/login-logo.png) !important;
 		background-repeat: no-repeat !important;
 		background-size: contain !important;
 		margin-bottom: 0;
