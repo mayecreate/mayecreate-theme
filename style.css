@@ -28,7 +28,6 @@ body {
 	max-width: 1470px; /* CHANGE ME TO MATCH YOUR WEBSITE DESIGN */
 	width: 90%;
 }
-
 .mobile_hide {
 	height: 0;
 	overflow: hidden;
