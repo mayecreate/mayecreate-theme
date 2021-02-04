@@ -23,7 +23,7 @@ body {
 	margin:0;
 	padding:0;
 	-webkit-font-smoothing: antialiased;
-}
+} 
 .container {
 	max-width: 1470px; /* CHANGE ME TO MATCH YOUR WEBSITE DESIGN */
 	width: 90%;
