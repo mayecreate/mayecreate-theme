@@ -4,7 +4,7 @@ Theme URI: https://github.com/mayecreate/mayecreate-theme/releases
 Author: Tyler Ernst, Rebecca Thomas, Creative Director Monica Pitts
 Author URI: http://www.mayecreate.com/
 Description: Parent Theme built on Bootstrap v4.5.0
-Version: 1.0.6
+Version: 1.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -23,7 +23,7 @@ body {
 	margin:0;
 	padding:0;
 	-webkit-font-smoothing: antialiased;
-}
+} 
 .container {
 	max-width: 1470px; /* CHANGE ME TO MATCH YOUR WEBSITE DESIGN */
 	width: 90%;
