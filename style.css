@@ -651,7 +651,7 @@ div#homefeatured .carousel-control.right {
 }
 #drawer-menu .form-group {
     z-index: 1000;
-    width: 100%;
+    width: 90%;
     position: absolute;
     top: 0;
     right: 0;
@@ -662,7 +662,7 @@ div#homefeatured .carousel-control.right {
 
 #drawer-menu .form-group .form-control {
     width: 80%;
-    float: left;
+    float: right;
     margin-right: 1%;
 }
 
