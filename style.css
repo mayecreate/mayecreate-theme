@@ -4,7 +4,7 @@ Theme URI: https://github.com/mayecreate/mayecreate-theme/releases
 Author: Tyler Ernst, Rebecca Thomas, Creative Director Monica Pitts
 Author URI: http://www.mayecreate.com/
 Description: Parent Theme built on Bootstrap v4.5.0
-Version: 1.0.8
+Version: 1.0.10
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -1643,19 +1643,19 @@ img {
 				    	/* if you have different color for Nav link hover state, change it here */
 				    }  
 					
-					#top_nav ul ul li a {
-						background: none !important;
-						text-align: left !important;
-						color: #000 !important;
-						font-size: 18px !important;
+					#top_nav ul ul li a:link, #top_nav ul ul li a:visited {
+						background: none;
+						text-align: left;
+						color: #000;
+						font-size: 18px;
 						
 					}
 					
-					#top_nav ul ul li a:hover {
-						background: none !important;
-						text-align: left !important;
-						color: #333 !important;
-						font-size: 18px !important;
+					#top_nav ul ul li a:hover, #top_nav ul ul li a:active {
+						background: none;
+						text-align: left;
+						color: #333;
+						font-size: 18px;
 					}
 					
 					#top_nav > ul > li {
