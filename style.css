@@ -677,15 +677,21 @@ div#homefeatured .carousel-control.right {
 	from {opacity: 0;}
 	to {opacity: 1;}
 }
-
-#navigation.affix-top{
+#navigation, #navigation * {
+	-webkit-transition: all 0.14s ease-in-out;
+	-moz-transition: all 0.14s ease-in-out;
+	-o-transition: all 0.14s ease-in-out;
+	-ms-transition: all 0.14s ease-in-out;
+}
+#navigation.affix-top {
 	z-index: 100;
 	position: absolute;
 	width: 100%;
+	background: #fff;
 }
-#navigation.affix{
-	animation: affixFadeIn 1s  ease-in;
-	-webkit-animation: affixFadeIn 1s;
+#navigation.affix {
+	/*animation: affixFadeIn 1s  ease-in;
+	-webkit-animation: affixFadeIn 1s;*/
 	z-index: 100;
 	width: 100%;
 }
@@ -1186,7 +1192,15 @@ img {
     bottom: 0;
     margin: auto;
 }
-
+/*BLOG
+============================ */
+.post_nav_wrapper {
+	text-align: center;
+}
+.post_nav_wrapper a {
+	padding: 0 10px;
+	display: inline-block;
+}
 /* PROJECTS
 ====================================  */
 /*-=-=-=OPTION ONE=-=-=-*/
@@ -1431,6 +1445,10 @@ img {
 				margin-top:0;
 				margin-bottom:35px;
 			}
+			#navigation.affix-top {
+				position: fixed;
+			
+			}
 			#navigation.affix {
 				margin-top:0;
 				width: 100%;
@@ -1521,7 +1539,7 @@ img {
 					
 					/* BUTTONS
 					===========================================  */
-					a.btn-mayecreate.large:link, a.btn-mayecreate.large:visited, a.btn-mayecreate:link, a.btn-mayecreate:visited, .wp-block-button, .wp-block-button.large {
+					a.btn-mayecreate.large:link, a.btn-mayecreate.large:visited, a.btn-mayecreate:link, a.btn-mayecreate:visited, .wp-block-button, .wp-block-button.large, span.btn-mayecreate {
 						display: table;
 						margin: 0 15px 20px 0;
 					}
@@ -1780,6 +1798,68 @@ img {
 					#mobile_menu {
 				    	display: none;
 				    }
+					/*WIDE MENU
+					============================ */
+					.affix-top #main_nav > ul > .wide-drop > ul {
+						width: 100%;
+						max-width: 100%;
+						left: 0;
+						position: fixed;
+						padding: 45px 10%;
+						text-align: center;
+						vertical-align: top;
+					}
+					.affix-top #main_nav > ul > .wide-drop > ul:after {
+						display: block;
+						clear: both;
+						content: '';
+					}
+					.affix #main_nav > ul > .wide-drop > ul {
+						top: auto !important;
+					}
+					.affix-top #main_nav > ul > .wide-drop > ul > li {
+						float: none;
+						display: inline-block;
+						width: calc(100% / 3 - 26px);
+						margin-right: 15px;
+						padding-right: 10px;
+						border-right: 0 none;
+						height: 100%;
+						text-align: left;
+						vertical-align: top;
+					}
+					.affix-top #main_nav > ul > .wide-drop > ul > li:last-child {
+						margin-right: 0;
+						padding-right: 0;
+						border: 0 none;
+						width: calc(100% / 3);
+					}
+					.affix-top #main_nav > ul > .wide-drop > ul > li a {
+						padding: 5px 10px;
+						text-transform: uppercase;
+						margin-bottom: 0;
+					}
+					.affix-top #main_nav > ul > .wide-drop > ul > li > a {
+						margin: 0 0 10px 0;
+						font-weight: 300;
+					}
+					.affix-top #main_nav > ul > .wide-drop > ul > li > a:hover, .affix-top #main_nav > ul > .wide-drop > ul > li > a:active {
+						background: none;
+					}
+					.affix-top #main_nav > ul > .wide-drop > ul ul {
+						position: static;
+						background: none;
+						display: block;
+						width: 100%;
+						max-width: 100%;
+						border: 0 none;
+					}
+					.affix-top #main_nav > ul > .wide-drop > ul ul a:link, .affix-top #main_nav > ul > .wide-drop > ul ul a:visited {
+						font-weight: 400;
+						text-transform: none;
+					}
+					.affix-top #main_nav > ul > .wide-drop > ul ul a:hover, .affix-top #main_nav > ul > .wide-drop > ul ul a:active {
+					}
 
 				    /* FOOTER NAVIGATION
 				    ==========================================  */

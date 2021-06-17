@@ -32,7 +32,7 @@ add_action('acf/input/admin_footer', 'my_acf_collor_pallete_script');
 function register_acf_block_types() {
 
     // register a simple pagebreak block.
-    acf_register_block_type(
+    /*acf_register_block_type(
 		array(
 			'name'              => 'pagebreak',
 			'title'             => __('Page Break - Simple'),
@@ -42,13 +42,13 @@ function register_acf_block_types() {
 			'icon'              => 'editor-insertmore',
 			'keywords'          => array( 'page', 'break', 'pagebreak' ),
 		)
-	);
+	);*/
 	
     // register a partial pagebreak block.
     acf_register_block_type(
 		array(
 			'name'              => 'pagebreak-start',
-			'title'             => __('Page Break - Complex'),
+			'title'             => __('Page Break'),
 			'description'       => __('Add a opening pagebreak block to your page. PLEASE NOTE: If this pagebreak is the last one on the page you DO NOT need the End Break block after. If this is not the last element on the page the you NEED to put the End Break block after.'),
 			'render_template'   => 'blocks/pagebreak-complex.php',
 			'category'          => 'formatting',
@@ -80,6 +80,19 @@ function register_acf_block_types() {
 			'category'          => 'formatting',
 			'icon'              => 'admin-links',
 			'keywords'          => array( 'button' ),
+		)
+	);
+
+    // register a featured posts block.
+    acf_register_block_type(
+		array(
+			'name'              => 'featured-posts',
+			'title'             => __('Featured Posts'),
+			'description'       => __('Add a featured posts block to your page.'),
+			'render_template'   => 'blocks/featured-posts.php',
+			'category'          => 'formatting',
+			'icon'              => 'admin-post',
+			'keywords'          => array( 'featured', 'posts' ),
 		)
 	);
 }
