@@ -16,8 +16,7 @@ function mayecreate_id_column_content( $column, $id ) {
   }
 }
 
-// WP Menu Categories
-add_action( 'init', 'build_taxonomies', 0 );
+
 
 function mayecreate_create_post_type() {
 
