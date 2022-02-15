@@ -15,7 +15,7 @@ function mayecreate_id_column_content( $column, $id ) {
     echo $id;
   }
 }
-
+ 
 
 
 function mayecreate_create_post_type() {
