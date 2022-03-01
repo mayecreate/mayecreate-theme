@@ -16,7 +16,10 @@ function mayecreate_id_column_content( $column, $id ) {
   }
 }
  
-
+if (get_template_directory() === get_stylesheet_directory()) {} else {
+  // WP Menu Categories 
+  add_action( 'init', 'build_taxonomies', 0 );
+}
 
 function mayecreate_create_post_type() {
 
