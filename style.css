@@ -203,6 +203,7 @@ a:hover, a:active, a:focus{
 	margin-top: 0;
 	border-color: transparent;
 	height: 30vh;
+	position: relative;
 }
 
  .pagehead .page-header .entry-title{
