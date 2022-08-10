@@ -243,15 +243,23 @@
         </div><!--// carousel-inner -->
         
 		<?php
-        
-		/* If directional navigation is to be displayed, display it
+        /* If directional navigation is to be displayed, display it
 		===========================================================*/
-		if(get_theme_mod('carousel_layout_dir_nav', 'yes-arrows') == 'yes-arrows') { 
-			// Carousel Navigation
+		if(get_theme_mod('carousel_layout_dir_nav', 'yes-arrows') == 'yes-arrows') { ?>
+			<!-- // Carousel Navigation
         	echo '<a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="icon-left-open"></span></a>';
-        	echo '<a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="icon-right-open"></span></a>';
-		} 
-		?>
+        	echo '<a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="icon-right-open"></span></a>'; -->
+
+			
+			<button class="carousel-control-prev left" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next right" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		<?php } ?>
 </div>
 
 <?php wp_reset_query(); ?>
