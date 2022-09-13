@@ -1,4 +1,4 @@
-<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+<div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
 
 <?php
@@ -6,40 +6,30 @@
 		/* If Position Indicators are to be displayed, display them
 		===========================================================*/
 		if(get_theme_mod('carousel-indicators', 'yes-dots') == 'yes-dots') {
-			echo '<ol class="carousel-indicators">';
-		
+			echo '<div class="carousel-indicators">';
+			$slide_to = '0';
+			$slide_label = '1';
 			/* The Query for the First Indicator Dot.
 			===========================================================*/ 
 			$the_query = new WP_Query(array(
 				'post_type' => 'carousel_slides',
-				'posts_per_page' => 1,
-				'orderby' => 'menu_order' 
+				'posts_per_page' => 10,
+				'orderby' => 'menu_order',
+				'order' => 'ASC', 
 				));
 			
 				while ($the_query->have_posts() ) : $the_query->the_post();
-			
-                	echo '<li data-target="#myCarousel" data-slide-to="0" class="active"></li>';
+					if( $the_query->current_post == 0 && !is_paged() ) {
+						$active_class = 'class="active"  aria-current="true"';
+					} else {
+						$active_class = '';
+					}
+					
+                	echo '<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="'.$slide_to++.'" '.$active_class.' aria-label="Slide '.$slide_label++.'"></button>';
     		
             	endwhile; wp_reset_postdata();
-        	
-			/* The Query for the Rest of the Indicator Dots.
-			===========================================================*/ 
-			$post_count = 1;
-			$the_query = new WP_Query(array(
-				'post_type' => 'carousel_slides',
-				'posts_per_page' => 4,
-				'offset' => 1,
-				'orderby' => 'menu_order' 
-				));
-			
-				while ($the_query->have_posts() ) : $the_query->the_post();
-			
-            	echo '<li data-target="#myCarousel" data-slide-to="'.$post_count.'"></li>';
-    		
-            	$post_count++;
-				endwhile; wp_reset_postdata();
 
-      		echo '</ol>';
+      		echo '</div>';
 		} 
 		?>
 		
